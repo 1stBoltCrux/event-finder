@@ -31,3 +31,14 @@ var dierksBently = new Event(["Dierks Bently"], [2018, 4, 6], "7:00 PM", roselan
 var keithUrban = new Event(["Keith Urban"], [2018, 4, 8], "8:00 PM", wonderBallroom, "21", "Country", 50);
 var mirandaLambert = var Event(["Miranda Lambert"], [2018, 4, 10], "6:00 PM", starTheater, "aa", "Country", 35);
 var rascalFlats = new Event(["Rascal Flats"], [2018, 4, 12], "7:00 PM", wonderBallroom, "aa", "Country", 25);
+
+var asapRocky = new Event(["A$AP Rocky"], [2018, 4, 1] "7:00 PM", dantes, "21", "Hiphop", 45);
+var chanceTheRapper = new Event(["Chance the Rapper"], [2018, 4, 3], "9:00 PM", analogCafe, "21", "Hiphop", 14);
+var deLaSoul = new Event(["De La Soul"], [2018, 4, 7], "6:00 PM", dougFir, "aa", "Hiphop", 33);
+var joeyBadass = new Event(["Joey Bada$$"], [2018, 4, 9], "8:00 PM", mississippiStudios, "aa", "Hiphop", 22);
+var kanyeWest = var Event(["Kanye West"], [2018, 4, 11], "7:00 PM", theKnow, "aa", "Hiphop", 90);
+var kendrickLamar = new Event(["Kendrick Lamar"], [2018, 4, 13], "9:00 PM", wonderBallroom, "21", "Hiphop", 80);
+var pitBull = new Event(["Pitbull"], [2018, 4, 15], "7:00 PM", bunkBar, "aa", "Hiphop", 44);
+var talibKweli = new Event(["Talib Kweli"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Hiphop", 35);
+var tylerTheCreator = var Event(["Tyler the Creator"], [2018, 4, 19], "7:00 PM", starTheater, "21", "Hiphop", 22);
+var vinceStaples = new Event(["Vince Staples"], [2018, 4, 21], "9:00 PM", roselandTheater, "aa", "Hiphop", 22);
