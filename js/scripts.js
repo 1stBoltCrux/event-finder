@@ -13,6 +13,8 @@ function Venue(name, location) {
   this.location = location;
 }
 
+function Bands()
+
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast");
 var theKnow = new Venue("The Know", "Northeast");
 var mississippiStudios = new Venue("Mississippi Studios", "Northeast");
@@ -24,5 +26,3 @@ var analogCafe = new Venue("The Analaog Cafe", "Southeast");
 var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest");
 var dantes = new Venue("Dante's", "Southwest");
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest");
-
- 
