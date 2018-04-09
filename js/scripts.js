@@ -42,3 +42,16 @@ var pitBull = new Event(["Pitbull"], [2018, 4, 15], "7:00 PM", bunkBar, "aa", "H
 var talibKweli = new Event(["Talib Kweli"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Hiphop", 35);
 var tylerTheCreator = var Event(["Tyler the Creator"], [2018, 4, 19], "7:00 PM", starTheater, "21", "Hiphop", 22);
 var vinceStaples = new Event(["Vince Staples"], [2018, 4, 21], "9:00 PM", roselandTheater, "aa", "Hiphop", 22);
+
+var arcadeFire = new Event(["Arcade Fire"], [2018, 4, 14] "8:00 PM", wonderBallroom, "21", "Rock", 45);
+var brokenSocialScene = new Event(["Broken Social Scene"], [2018, 4, 16], "9:00 PM", dougFir, "aa", "Rock", 20);
+var broncho = new Event(["Broncho"], [2018, 4, 18], "8:00 PM", theKnow, "21", "Rock", 12);
+var builtToSpill = new Event(["Built to Spill"], [2018, 4, 20], "8:00 PM", mississippiStudios, "21", "Rock", 25);
+var courtneyBarnett = var Event(["Courtney Barnett"], [2018, 4, 22], "7:00 PM", starTheater, "aa", "Rock", 30);
+var kingTuff = new Event(["King Tuff"], [2018, 4, 24], "9:00 PM", bunkBar, "21", "Rock", 10);
+var panicAtTheDisco = new Event(["Panic at the Disco"], [2018, 4, 26], "7:00 PM", analogCafe, "21", "Rock", 45);
+var shakeyGraves = new Event(["Shakey Graves"], [2018, 4, 28], "8:00 PM", dantes, "21", "Rock", 15);
+var theeOhSees = var Event(["Thee Oh Sees"], [2018, 4, 30], "9:00 PM", roselandTheater, "21", "Rock", 20);
+var theSword = new Event(["The Sword"], [2018, 4, 1], "9:00 PM", theKnow, "21", "Rock", 12);
+var violentFemmes = var Event(["Violent Femmes"], [2018, 4, 3], "7:00 PM", schnitzer, "21", "Rock", 70);
+var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississippiStudios, "21", "Rock", 35);
