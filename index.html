@@ -3,29 +3,53 @@
 <head>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery.3.3.1.js" charset="utf-8"></script>
+  <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
   <script src="js/scripts.js" charset="utf-8"></script>
   <title>Event Finder</title>
 </head>
 <body>
   <div class="container">
-    <form id="form1" action="index.html" method="post">
+    <form id="properties-search" action="index.html" method="post">
       <div class="form-group">
-        <div class="">
-          <input class="form-control" type="text" name="" value="" placeholder="" required>
-        </div>
-        <div class="">
-          <input class="form-control" type="text" name="" value="" placeholder=" "required>
-        </div>
-        <div class="">
-          <input class="form-control" type="text" name="" value="" placeholder=" "required>
-        </div>
-        <div class="">
-          <input class="form-control" type="text" name="" value="" placeholder=" "required>
+        <div class="row">
+          <div class="col">
+            <label for="">Date</label>
+            <input class="form-control" id="date" type="date" name="" value="" required>
+          </div>
+          <div class="col">
+            <label for="">Area</label>
+            <select class="form-control" id="area" type="text" name="" value="" required>
+              <option value="All Areas">All Areas</option>
+              <option value="NE">North/Northeast</option>
+              <option value="SE">Southeast</option>
+              <option value="NW">Northwest</option>
+              <option value="SW">Southwest</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="">Genre</label>
+            <select class="form-control" id="genre" type="text" name="" value="" required>
+              <option value="All Genres">All Genres</option>
+              <option value="Pop">Pop</option>
+              <option value="Rock">Rock</option>
+              <option value="Hip-Hop">Hip-Hop</option>
+              <option value="Country">Country</option>
+              <option value="Electronic">Electronic</option>
+            </select>
+          </div>
+          <div class="col">
+            <label class="form-check-label"></label>
+            <input type="checkbox" id="allage" name="" value="allages">
+              All Ages
+            </label>
+          </div>
         </div>
       </div>
       <button type="submit" class="btn btn-danger">Submit</button>
     </form>
+    <div class="no-display" id="concert-list">
+
+    </div>
   </div>
 </body>
 </html>
