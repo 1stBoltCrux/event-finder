@@ -3,13 +3,13 @@ var concertArray = [];
 
 
 
-
-
 //rewrite as prototype?
-function concertSearch(number){
+function concertSearch(array){
   for (var i = 0; i < concertArray.length; i++) {
-    if (concertArray[i].date === inputDateToNumber){
-      return [i];
+    console.log(concertArray[0].date[2]);
+    console.log(array[2]);
+    if (concertArray[i].date[2] === array[2]){
+      return concertArray[i].name;
     }
   }
 }
@@ -31,7 +31,9 @@ $(document).ready(function(){
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
     var inputAge = $("#allage").val();
-
+    concertSearch(inputDateToNumber);
+    $("#concert-list").append(concertSearch(inputDateToNumber));
+    $("#concert-list").show();
     console.log(inputDateToNumber);
 
 
