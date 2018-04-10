@@ -14,6 +14,8 @@ function Venue(name, location) {
   this.location = location;
 }
 
+// VENUES //
+
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast");
 var theKnow = new Venue("The Know", "Northeast");
 var mississippiStudios = new Venue("Mississippi Studios", "Northeast");
@@ -26,12 +28,16 @@ var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest");
 var dantes = new Venue("Dante's", "Southwest");
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest");
 
+// COUNTRY //
+
 var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2] "7:00 PM", crystalBallroom, "aa", "Country", 45);
 var dariusRucker = new Event(["Darius Rucker"], [2018, 4, 4], "7:00 PM", schnitzer, "21", "Country", 70);
 var dierksBently = new Event(["Dierks Bently"], [2018, 4, 6], "7:00 PM", roselandTheater, "aa", "Country", 35);
 var keithUrban = new Event(["Keith Urban"], [2018, 4, 8], "8:00 PM", wonderBallroom, "21", "Country", 50);
 var mirandaLambert = var Event(["Miranda Lambert"], [2018, 4, 10], "6:00 PM", starTheater, "aa", "Country", 35);
 var rascalFlats = new Event(["Rascal Flats"], [2018, 4, 12], "7:00 PM", wonderBallroom, "aa", "Country", 25);
+
+//HIPHOP//
 
 var asapRocky = new Event(["A$AP Rocky"], [2018, 4, 1] "7:00 PM", dantes, "21", "Hiphop", 45);
 var chanceTheRapper = new Event(["Chance the Rapper"], [2018, 4, 3], "9:00 PM", analogCafe, "21", "Hiphop", 14);
@@ -43,6 +49,8 @@ var pitBull = new Event(["Pitbull"], [2018, 4, 15], "7:00 PM", bunkBar, "aa", "H
 var talibKweli = new Event(["Talib Kweli"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Hiphop", 35);
 var tylerTheCreator = var Event(["Tyler the Creator"], [2018, 4, 19], "7:00 PM", starTheater, "21", "Hiphop", 22);
 var vinceStaples = new Event(["Vince Staples"], [2018, 4, 21], "9:00 PM", roselandTheater, "aa", "Hiphop", 22);
+
+// ROCK //
 
 var arcadeFire = new Event(["Arcade Fire"], [2018, 4, 14] "8:00 PM", wonderBallroom, "21", "Rock", 45);
 var brokenSocialScene = new Event(["Broken Social Scene"], [2018, 4, 16], "9:00 PM", dougFir, "aa", "Rock", 20);
@@ -57,12 +65,16 @@ var theSword = new Event(["The Sword"], [2018, 4, 1], "9:00 PM", theKnow, "21", 
 var violentFemmes = var Event(["Violent Femmes"], [2018, 4, 3], "7:00 PM", schnitzer, "21", "Rock", 70);
 var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississippiStudios, "21", "Rock", 35);
 
+// ELECTRONIC //
+
 var bassNectar = new Event(["Bassnectar"], [2018, 4, 23], "7:00 PM", analogCafe, "aa", "Electronic", 45);
 var davidGuetta = new Event(["David Guetta"], [2018, 4, 25], "8:00 PM", crystalBallroom, "aa", "Electronic", 30);
 var deadMaus = var Event(["Deadmaus"], [2018, 4, 27], "7:00 PM", roselandTheater, "aa", "Electronic", 50);
 var infectedMushroom = new Event(["Infected Mushroom"], [2018, 4, 29], "9:00 PM", wonderBallroom, "21", "Electronic", 14);
 var prettyLights = var Event(["Pretty Lights"], [2018, 4, 1], "7:00 PM", dantes, "21", "Electronic", 13);
 var skrillex = new Event(["Skrillex"], [2018, 4, 3], "8:00 PM", theKnow, "21", "Electronic", 42);
+
+// POP //
 
 var adele = new Event(["Adele"], [2018, 4, 7], "9:00 PM", schnitzer, "aa", "Pop", 110);
 var beyonce = new Event(["Beyonce"], [2018, 4, 9], "8:00 PM", crystalBallroom, "aa", "Pop", 120);
