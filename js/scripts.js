@@ -119,5 +119,6 @@ $(document).ready(function(){
     $("#concert-list").append(concertSearch(inputDateToNumber));
     $("#concert-list").show();
     console.log(inputDateToNumber);
+    $('#modal').modal('toggle')
   })
 });
