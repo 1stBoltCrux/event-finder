@@ -13,17 +13,21 @@
       <div class="form-group">
         <div class="row">
           <div class="col">
-            <label for="">Date</label>
-            <input class="form-control" id="date" type="date" name="" value="" required>
+            <label for="">Start Date</label>
+            <input class="form-control" id="dateBegin" type="date" name="" value="" required>
+          </div>
+          <div class="col">
+            <label for="">End Date</label>
+            <input class="form-control" id="dateEnd" type="date" name="" value="" required>
           </div>
           <div class="col">
             <label for="">Area</label>
             <select class="form-control" id="area" type="text" name="" value="" required>
               <option value="All Areas">All Areas</option>
-              <option value="NE">North/Northeast</option>
-              <option value="SE">Southeast</option>
-              <option value="NW">Northwest</option>
-              <option value="SW">Southwest</option>
+              <option value="Northeast">North/Northeast</option>
+              <option value="Southeast">Southeast</option>
+              <option value="Northwest">Northwest</option>
+              <option value="Southwest">Southwest</option>
             </select>
           </div>
           <div class="col">
@@ -39,7 +43,7 @@
           </div>
           <div class="col">
             <label class="form-check-label"></label>
-            <input type="checkbox" id="allage" name="" value="allages">
+            <input type="checkbox" id="allage" name="" value="aa">
               All Ages
             </label>
           </div>
@@ -48,7 +52,7 @@
       <button type="submit" class="btn btn-danger">Submit</button>
     </form>
     <div class="no-display" id="concert-list">
-
+      
     </div>
   </div>
 </body>
