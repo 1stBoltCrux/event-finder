@@ -198,8 +198,8 @@ $(document).ready(function(){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
     }
     for (var i = 0; i < ageArray.length; i++) {
-      $("#concert-list").append('<div id="' + ageArray[i].bands + '"' +
-                                  '<span class="event-band-name">' + ageArray[i].bands + ' </span>' +
+      $("#concert-list").append('<div class="resultList">' +
+                                  '<h3><span class="event-band-name">' + ageArray[i].bands + ' </span></h3>' +
                                   '<span class="event-date">' + ageArray[i].date + ' </span>' +
                                   '<span class="event-time">' + ageArray[i].time + ' </span>' +
                                   '<span class="event-age">' + ageArray[i].age + ' </span>' +
