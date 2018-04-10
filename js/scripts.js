@@ -209,5 +209,9 @@ $(document).ready(function(){
                                 '</div>');
     }
     $("#concert-list").show();
+
+
+
   });
+
 });

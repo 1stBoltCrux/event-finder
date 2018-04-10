@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Shrikhand" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
   <script src="js/scripts.js" charset="utf-8"></script>
-  <title>Event Finder</title>
+  <script src="js/bootstrap.js"></script>
+  <title>Show Dog</title>
 </head>
 <body>
+  <!-- Begin Header Nav Bar -->
+  <!-- <nav class="navbar sticky-top navbar-light" id="headerNav">
+  <a class="navbar-brand" href="#">Show Dog</a>
+</nav> -->
+<!-- End Header Nav Bar -->
+
+<!-- Begin Header Jumbotron Form -->
+<div class="jumbotron jumbotron-fluid header">
   <div class="container">
+    <h1 class="text-center" id="mainTitle">Show Dog</h1>
     <form id="properties-search" action="index.html" method="post">
       <div class="form-group">
         <div class="row">
@@ -42,18 +53,171 @@
             </select>
           </div>
           <div class="col">
-            <label class="form-check-label"></label>
-            <input type="checkbox" id="allage" name="" value="aa">
-              All Ages
-            </label>
+            <label for="">Age Range</label>
+            <select class="form-control" id="ages" type="text" name="" value="" required>
+              <option value="allShows">All Shows</option>
+              <option value="21">21+ Only Shows</option>
+              <option value="aa">All Ages Shows</option>
+            </select>
+
           </div>
         </div>
       </div>
       <button type="submit" class="btn btn-danger">Submit</button>
     </form>
-    <div class="no-display" id="concert-list">
-      
-    </div>
   </div>
-</body>
-</html>
+</div>
+<!-- End Header Jumbotron Form -->
+
+<!-- Begin Output List -->
+<div class="container">
+  <div class="no-display" id="concert-list">
+
+
+
+
+  </div>
+</div>
+<!-- End Output List -->
+
+<!-- Begin Featured Shows -->
+<div class="container-fluid featuredShows">
+  <h1 class="text-center" id="featShows">Featured Shows</h1>
+  <div class="row featured">
+    <div class="col">
+      <div class="card featuredCard" style="width: 18rem;">
+        <img class="card-img-top" src="imgs/country/bradpaisley.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Brad Paisley</h5>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#bradPaisley">View Show</a>
+          <!-- The Modal -->
+          <div class="modal fade" id="bradPaisley">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Brad Paisley</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <img class="modalImage" src="imgs/country/bradpaisley.jpg" alt="Brad Paisley">
+                  <div>
+                    <h5>Brad Paisley</h5>
+                    <p>Brad Paisley is a critically acclaimed singer, songwriter, guitarist and entertainer whose talents have earned him numerous awards, including three GRAMMYs, two American Music Awards, 14 Academy of Country Music Awards and 14 Country Music Association Awards (including Entertainer of the Year), among many others. He has been a proud member of the Grand Ole Opry since 2001. Paisley has written 20 of his 23 #1 singles with the first being his 1999 hit “He Didn’t Have To Be” and his most recent, “Perfect Storm,” from his chart-topping 2014 album Moonshine in the Trunk. On January 21, he’ll launch the 2016 winter leg of his highly successful Crushin’ It World Tour, continuing across the U.S. and Canada during the winter months with special guests Eric Paslay and Cam.</p>
+                  </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" >
+      <div class="card featuredCard" style="width: 18rem;">
+        <img class="card-img-top" src="imgs/rock/courtneybarnett.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Courtney Barnett</h5>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#courtneyBarnett">View Show</a>
+          <!-- The Modal -->
+          <div class="modal fade" id="courtneyBarnett">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Courtney Barnett</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <img class="modalImage" src="imgs/rock/courtneybarnett.jpg" alt="Chance the Rapper">
+                  <div>
+                    <h5>Courtney Barnett</h5>
+                    <p>Melbourne-based singer/songwriter Courtney Barnett first came to light in 2012 when her self-released EP, I've Got a Friend Called Emily Ferris, appeared and was roundly praised across Australia. Her conversational, deadpan delivery and garage rock-infused folk-pop style caught the attention of influential website Pitchfork, which named her song "Avant Gardener" one of its Best New Tracks during the summer of 2013. That year Barnett went on to release her second EP, How to Carve a Carrot into a Rose; the EP fed the continued international hype with songs like "History Eraser," which was nominated for the ARPA Song of the Year in Australia. As her momentum gathered, Barnett was invited to perform at New York's music showcase CMJ Music Marathon, as well as playing shows in Europe. Later in 2013 she put out her two EPs on one record titled Double EP: Sea of Split Peas.</p>
+                    <p>American label Mom + Pop signed her to a deal in 2014 and reissued Double EP in April of that year. Yet another EP, this one a compilation titled A Pair of Pears (With Shadows), appeared by the end of 2014. Early the following year, Barnett made appearances on American television and the SXSW festival in preparation for her heavily anticipated first full-length, Sometimes I Sit and Think, and Sometimes I Just Sit., released in March 2015. A critical and cult success, Sometimes I Sit wound up peaking at number four in Australia and reaching 20 in the U.S.; she'd later be nominated for Best New Artist at the 2016 Grammys. Barnett followed her acclaimed debut by teaming up with Kurt Vile for the duet album Lotta Sea Lice. The record was released in October 2017 and was supported by a brief American tour.</p>
+                  </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card featuredCard" style="width: 18rem;">
+        <img class="card-img-top" src="imgs/hiphop/chancetherapper.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Chance the Rapper</h5>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#chanceTheRapper">View Show</a>
+          <!-- The Modal -->
+          <div class="modal fade" id="chanceTheRapper">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Chance the Rapper</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <img class="modalImage" src="imgs/hiphop/chancetherapper.jpg" alt="Chance the Rapper">
+                  <div>
+                    <h5>Chance the Rapper</h5>
+                    <p>
+                      Chancelor Bennett (born April 16, 1993), better known by his stage name Chance The Rapper, is an American hip hop recording artist from Chicago, Illinois. In 2013, he began to gain recognition following the release of his first two mixtapes. Chance first made some noise on the Chicago hip-hop blog Fake Shore Drive with his video for Nostalgia in early 2011. His latest mixtape, Coloring Book, was released for free on Apple Music on 12 May 2016.</p>
+                      <p>
+                        Chance achieved some success with his first mixtape 10Day, which details his 10 day long suspension from his high school. On April 30, 2013, Chance's second mixtape, Acid Rap dropped. It received diamond status from Datpiff. The Social Experiment, Chance's band with Donnie Trumpet, Peter Cottontail, and members of the O'My's, released their free album, Surf, on May 28, 2015.</p>
+                      </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Featured Shows -->
+
+    <!-- Begin Footer Section -->
+    <div class="container-fluid footer">
+      <div class="image">
+        <div id="overlay">
+          
+        </div>
+      </div>
+    </div>
+    <nav class="navbar sticky-bottom" id="footerNav">
+      <div class="centered">
+        <span class="navbar-text">
+          ©2018, Show Dog, Inc.
+        </span>
+      </div>
+    </nav>
+    <!-- End Footer Section -->
+  </body>
+  </html>
