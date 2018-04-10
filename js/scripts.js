@@ -57,6 +57,13 @@ var theSword = new Event(["The Sword"], [2018, 4, 1], "9:00 PM", theKnow, "21", 
 var violentFemmes = var Event(["Violent Femmes"], [2018, 4, 3], "7:00 PM", schnitzer, "21", "Rock", 70);
 var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississippiStudios, "21", "Rock", 35);
 
+var bassNectar = new Event(["Bassnectar"], [2018, 4, 23], "7:00 PM", analogCafe, "aa", "Electronic", 45);
+var davidGuetta = new Event(["David Guetta"], [2018, 4, 25], "8:00 PM", crystalBallroom, "aa", "Electronic", 30);
+var deadMaus = var Event(["Deadmaus"], [2018, 4, 27], "7:00 PM", roselandTheater, "aa", "Electronic", 50);
+var infectedMushroom = new Event(["Infected Mushroom"], [2018, 4, 29], "9:00 PM", wonderBallroom, "21", "Electronic", 14);
+var prettyLights = var Event(["Pretty Lights"], [2018, 4, 1], "7:00 PM", dantes, "21", "Electronic", 13);
+var skrillex = new Event(["Skrillex"], [2018, 4, 3], "8:00 PM", theKnow, "21", "Electronic", 42);
+
 //Back-end Logic
 var concertArray = [];
 
