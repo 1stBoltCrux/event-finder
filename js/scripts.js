@@ -18,6 +18,7 @@ var concertArray = [];
 var dateArray = [];
 var areaArray = [];
 var genreArray = [];
+var ageArray = [];
 
 // VENUES //
 
@@ -129,7 +130,7 @@ var pink = new Event(["Pink"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Pop", 6
 concertArray.push(pink);
 var samSmith = new Event(["Sam Smith"], [2018, 4, 19], "7:00 PM", dougFir, "aa", "Pop", 45);
 concertArray.push(samSmith);
-
+// SEARCH FILTER FUNCTIONS
 function dateMatchLoop(array, array2) {
   for (var i = 0; i < concertArray.length; i++) {
     if (concertArray[i].date[2]>= array[2] && concertArray[i].date[2] <= array2[2]) {
@@ -137,7 +138,6 @@ function dateMatchLoop(array, array2) {
     }
   }
 }
-
 function areaMatchLoop(string) {
   for (var i = 0; i < dateArray.length; i++) {
     if (string === "All Areas") {
@@ -147,7 +147,6 @@ function areaMatchLoop(string) {
     }
   }
 }
-
 function genreMatchLoop(string) {
   for (var i = 0; i < areaArray.length; i++) {
     if (string === "All Genres") {
@@ -157,8 +156,15 @@ function genreMatchLoop(string) {
     }
   }
 }
-
-
+function ageMatchLoop(string) {
+  for (var i = 0; i < genreArray.length; i++) {
+    if (string === "allShows") {
+      ageArray = genreArray;
+    } else if (genreArray[i].age === string) {
+    ageArray.push(genreArray[i]);
+    }
+  }
+}
 
 // Event.prototype.dateMatch = function(array, array2) {
 //     if (this.date[2] >= array[2] && this.date[2] <= array2[2]) {
@@ -168,7 +174,7 @@ function genreMatchLoop(string) {
 //     }
 //   }
 
-
+// DATE STRING ARRAY TO NUMBER ARRAY
 var inputDateBeginToNumber = [];
 var inputDateEndToNumber = [];
 function dateToNumber(array, array2){
@@ -176,7 +182,6 @@ function dateToNumber(array, array2){
     array2.push(parseInt(element))
   });
 }
-
 //UI Logic
 $(document).ready(function(){
   $("#properties-search").submit(function(event){
@@ -188,19 +193,20 @@ $(document).ready(function(){
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
     var inputAge = $("#allage").val();
-    console.log(inputArea);
+
     dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
     areaMatchLoop(inputArea);
     genreMatchLoop(inputGenre);
+    ageMatchLoop(inputAge);
     console.log(dateArray);
     console.log(areaArray);
     console.log(genreArray);
-
+    console.log(ageArray);
+    
     // for (var i = 0; i < concertArray.length; i++) {
     //   $("#concert-list").append(concertArray[i].dateMatch(inputDateBeginToNumber, inputDateEndToNumber));
     // }
-    
-    $("#concert-list").show();
 
+    $("#concert-list").show();
   })
 });
