@@ -18,3 +18,20 @@
 .no-display{
   display: none;
 }
+
+/*Featured Show Jumbotron*/
+.jumbotron.jumbotron-fluid.featuredShows {
+  background-color: white;
+  background-size: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+#featShows {
+  padding-bottom: 35px;
+}
+
+.featuredCard {
+  margin: auto;
+}
