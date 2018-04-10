@@ -15,8 +15,9 @@ function Venue(name, location) {
 }
 
 var concertArray = [];
-var workingArray = [];
-var testArray = [];
+var dateArray = [];
+var areaArray = [];
+var genreArray = [];
 
 // VENUES //
 
@@ -132,20 +133,27 @@ concertArray.push(samSmith);
 function dateMatchLoop(array, array2) {
   for (var i = 0; i < concertArray.length; i++) {
     if (concertArray[i].date[2]>= array[2] && concertArray[i].date[2] <= array2[2]) {
-      workingArray.push(concertArray[i]);
-      // testArray.push(concertArray[i]);
-      // console.log(testArray);
+      dateArray.push(concertArray[i]);
     }
   }
 }
 
 function areaMatchLoop(string) {
-  for (var i = 0; i < workingArray.length; i++) {
+  for (var i = 0; i < dateArray.length; i++) {
     if (string === "All Areas") {
-      break;
-    } else if (workingArray[i].venue.location !== string) {
-    workingArray.splice((i-1), 1);
-    console.log("Hello?");
+      areaArray = dateArray;
+    } else if (dateArray[i].venue.location === string) {
+    areaArray.push(dateArray[i]);
+    }
+  }
+}
+
+function genreMatchLoop(string) {
+  for (var i = 0; i < areaArray.length; i++) {
+    if (string === "All Genres") {
+      genreArray = areaArray;
+    } else if (areaArray[i].genre === string) {
+    genreArray.push(areaArray[i]);
     }
   }
 }
@@ -159,29 +167,7 @@ function areaMatchLoop(string) {
 //       return "";
 //     }
 //   }
-//
-// Event.prototype.areaMatch = function(string) {
-//     if (this.venue.location === string {
-//       return this.bands + this.time + this.genre + this.age + this.price + this.venue.name + this.venue.location + this.date + "<br>";
-//     } else {
-//       return "";
-//     }
-//   }
-//
-// Event.prototype.genreMatch = function(string) {
-//     if (this.genre === string {
-//       return this.bands + this.time + this.genre + this.age + this.price + this.venue.name + this.venue.location + this.date + "<br>";
-//     } else {
-//       return "";
-//     }
-//   }
-// Event.prototype.ageMatch = function(string) {
-//     if (this.age === string) {
-//       return this.bands + this.time + this.genre + this.age + this.price + this.venue.name + this.venue.location + this.date + "<br>";
-//     } else {
-//       return "";
-//     }
-//   }
+
 
 var inputDateBeginToNumber = [];
 var inputDateEndToNumber = [];
@@ -205,12 +191,15 @@ $(document).ready(function(){
     console.log(inputArea);
     dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
     areaMatchLoop(inputArea);
-    console.log(workingArray);
-
+    genreMatchLoop(inputGenre);
+    console.log(dateArray);
+    console.log(areaArray);
+    console.log(genreArray);
 
     // for (var i = 0; i < concertArray.length; i++) {
     //   $("#concert-list").append(concertArray[i].dateMatch(inputDateBeginToNumber, inputDateEndToNumber));
     // }
+    
     $("#concert-list").show();
 
   })
