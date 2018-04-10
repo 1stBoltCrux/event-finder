@@ -1,4 +1,4 @@
-//Backend Logic
+//BUSINESS LOGIC //
 function  Event(bands, date, time, venue, age, genre, price) {
   this.bands = bands;
   this.date = date;
@@ -21,7 +21,6 @@ var genreArray = [];
 var ageArray = [];
 
 // VENUES //
-
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast");
 var theKnow = new Venue("The Know", "Northeast");
 var mississippiStudios = new Venue("Mississippi Studios", "Northeast");
@@ -35,7 +34,6 @@ var dantes = new Venue("Dante's", "Southwest");
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest");
 
 // COUNTRY //
-
 var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "aa", "Country", 45);
 concertArray.push(bradPaisley);
 var dariusRucker = new Event(["Darius Rucker"], [2018, 4, 4], "7:00 PM", schnitzer, "21", "Country", 70);
@@ -50,7 +48,6 @@ var rascalFlats = new Event(["Rascal Flats"], [2018, 4, 12], "7:00 PM", wonderBa
 concertArray.push(rascalFlats);
 
 //HIPHOP//
-
 var asapRocky = new Event(["A$AP Rocky"], [2018, 4, 1], "7:00 PM", dantes, "21", "Hiphop", 45);
 concertArray.push(asapRocky);
 var chanceTheRapper = new Event(["Chance the Rapper"], [2018, 4, 3], "9:00 PM", analogCafe, "21", "Hiphop", 14);
@@ -73,7 +70,6 @@ var vinceStaples = new Event(["Vince Staples"], [2018, 4, 21], "9:00 PM", rosela
 concertArray.push(vinceStaples);
 
 // ROCK //
-
 var arcadeFire = new Event(["Arcade Fire"], [2018, 4, 14], "8:00 PM", wonderBallroom, "21", "Rock", 45);
 concertArray.push(arcadeFire);
 var brokenSocialScene = new Event(["Broken Social Scene"], [2018, 4, 16], "9:00 PM", dougFir, "aa", "Rock", 20);
@@ -100,7 +96,6 @@ var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississip
 concertArray.push(ziggyMarley);
 
 // ELECTRONIC //
-
 var bassNectar = new Event(["Bassnectar"], [2018, 4, 23], "7:00 PM", analogCafe, "aa", "Electronic", 45);
 concertArray.push(bassNectar);
 var davidGuetta = new Event(["David Guetta"], [2018, 4, 25], "8:00 PM", crystalBallroom, "aa", "Electronic", 30);
@@ -115,7 +110,6 @@ var skrillex = new Event(["Skrillex"], [2018, 4, 3], "8:00 PM", theKnow, "21", "
 concertArray.push(skrillex);
 
 // POP //
-
 var adele = new Event(["Adele"], [2018, 4, 7], "9:00 PM", schnitzer, "aa", "Pop", 110);
 concertArray.push(adele);
 var beyonce = new Event(["Beyonce"], [2018, 4, 9], "8:00 PM", crystalBallroom, "aa", "Pop", 120);
@@ -130,7 +124,8 @@ var pink = new Event(["Pink"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Pop", 6
 concertArray.push(pink);
 var samSmith = new Event(["Sam Smith"], [2018, 4, 19], "7:00 PM", dougFir, "aa", "Pop", 45);
 concertArray.push(samSmith);
-// SEARCH FILTER FUNCTIONS
+
+// SEARCH FILTER FUNCTIONS //
 function dateMatchLoop(array, array2) {
   for (var i = 0; i < concertArray.length; i++) {
     if (concertArray[i].date[2]>= array[2] && concertArray[i].date[2] <= array2[2]) {
@@ -138,6 +133,7 @@ function dateMatchLoop(array, array2) {
     }
   }
 }
+
 function areaMatchLoop(string) {
   for (var i = 0; i < dateArray.length; i++) {
     if (string === "All Areas") {
@@ -147,6 +143,7 @@ function areaMatchLoop(string) {
     }
   }
 }
+
 function genreMatchLoop(string) {
   for (var i = 0; i < areaArray.length; i++) {
     if (string === "All Genres") {
@@ -156,6 +153,7 @@ function genreMatchLoop(string) {
     }
   }
 }
+
 function ageMatchLoop(string) {
   for (var i = 0; i < genreArray.length; i++) {
     if (string === "allShows") {
@@ -166,15 +164,7 @@ function ageMatchLoop(string) {
   }
 }
 
-// Event.prototype.dateMatch = function(array, array2) {
-//     if (this.date[2] >= array[2] && this.date[2] <= array2[2]) {
-//       return this.bands + this.time + this.genre + this.age + this.price + this.venue.name + this.venue.location + this.date + "<br>";
-//     } else {
-//       return "";
-//     }
-//   }
-
-// DATE STRING ARRAY TO NUMBER ARRAY
+// DATE STRING ARRAY TO NUMBER ARRAY //
 var inputDateBeginToNumber = [];
 var inputDateEndToNumber = [];
 function dateToNumber(array, array2){
@@ -182,7 +172,8 @@ function dateToNumber(array, array2){
     array2.push(parseInt(element))
   });
 }
-//UI Logic
+
+//UI LOGIC //
 $(document).ready(function(){
   $("#properties-search").submit(function(event){
   event.preventDefault();
