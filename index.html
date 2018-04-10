@@ -8,45 +8,67 @@
   <title>Event Finder</title>
 </head>
 <body>
-  <div class="container">
-    <form id="properties-search" action="index.html" method="post">
-      <div class="form-group">
-        <div class="row">
-          <div class="col">
-            <label for="">Date</label>
-            <input class="form-control" id="date" type="date" name="" value="" required>
-          </div>
-          <div class="col">
-            <label for="">Area</label>
-            <select class="form-control" id="area" type="text" name="" value="" required>
-              <option value="All Areas">All Areas</option>
-              <option value="NE">North/Northeast</option>
-              <option value="SE">Southeast</option>
-              <option value="NW">Northwest</option>
-              <option value="SW">Southwest</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="">Genre</label>
-            <select class="form-control" id="genre" type="text" name="" value="" required>
-              <option value="All Genres">All Genres</option>
-              <option value="Pop">Pop</option>
-              <option value="Rock">Rock</option>
-              <option value="Hip-Hop">Hip-Hop</option>
-              <option value="Country">Country</option>
-              <option value="Electronic">Electronic</option>
-            </select>
-          </div>
-          <div class="col">
-            <label class="form-check-label"></label>
-            <input type="checkbox" id="allage" name="" value="allages">
-              All Ages
-            </label>
+
+  <!-- Begin Header Nav Bar -->
+  <nav class="navbar sticky-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Event Chicken</a>
+  </nav>
+  <!-- End Header Nav Bar -->
+
+  <!-- Begin Header Jumbotron Form -->
+  <div class="jumbotron jumbotron-fluid header">
+    <div class="container">
+      <h1>Event Chicken</h1>
+      <form id="properties-search" action="index.html" method="post">
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label for="">Date</label>
+              <input class="form-control" id="date" type="date" name="" value="" required>
+            </div>
+            <div class="col">
+              <label for="">Area</label>
+              <select class="form-control" id="area" type="text" name="" value="" required>
+                <option value="All Areas">All Areas</option>
+                <option value="NE">North/Northeast</option>
+                <option value="SE">Southeast</option>
+                <option value="NW">Northwest</option>
+                <option value="SW">Southwest</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="">Genre</label>
+              <select class="form-control" id="genre" type="text" name="" value="" required>
+                <option value="All Genres">All Genres</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Hip-Hop">Hip-Hop</option>
+                <option value="Country">Country</option>
+                <option value="Electronic">Electronic</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="">Genre</label>
+              <select class="form-control" id="ages" type="text" name="" value="" required>
+                <option value="allShows">All Shows</option>
+                <option value="21">21+ Only Shows</option>
+                <option value="aa">All Ages Shows</option>
+              </select>
+              <!-- <label class="form-check-label"></label>
+              <input type="checkbox" id="allage" name="" value="allages">
+                All Ages
+              </label> -->
+            </div>
           </div>
         </div>
-      </div>
-      <button type="submit" class="btn btn-danger">Submit</button>
-    </form>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- End Header Jumbotron Form -->
+
+  <div class="container">
+
     <div class="no-display" id="concert-list">
 
     </div>
