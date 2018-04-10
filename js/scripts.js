@@ -130,19 +130,19 @@ concertArray.push(samSmith);
 
 var concertList = "";
 //rewrite as prototype?
-Event.prototype.dateMatch = function(array) {
-    if (this.date[2] >= array[2]) {
+Event.prototype.dateMatch = function(array, array2) {
+    if (this.date[2] >= array[2] && this.date[2] <= array2[2]) {
       return this.bands + this.time + this.genre + this.age + this.price + this.venue.name + this.venue.location + this.date + "<br>";
     } else {
       return "";
     }
   }
 
-var inputDateToNumber = [];
-
-function dateToNumber(array){
+var inputDateBeginToNumber = [];
+var inputDateEndToNumber = [];
+function dateToNumber(array, array2){
   array.forEach(function(element){
-    inputDateToNumber.push(parseInt(element))
+    array2.push(parseInt(element))
   });
 }
 
@@ -150,13 +150,15 @@ function dateToNumber(array){
 $(document).ready(function(){
   $("#properties-search").submit(function(event){
   event.preventDefault();
-    var inputDate = $("#date").val().split("-");
-    dateToNumber(inputDate);
+    var inputDateBegin = $("#dateBegin").val().split("-");
+    var inputDateEnd = $("#dateEnd").val().split("-");
+    dateToNumber(inputDateBegin, inputDateBeginToNumber);
+    dateToNumber(inputDateEnd, inputDateEndToNumber);
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
     var inputAge = $("#allage").val();
     for (var i = 0; i < concertArray.length; i++) {
-      $("#concert-list").append(concertArray[i].dateMatch(inputDateToNumber));
+      $("#concert-list").append(concertArray[i].dateMatch(inputDateBeginToNumber, inputDateEndToNumber));
     }
 
 
