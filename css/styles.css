@@ -94,3 +94,9 @@ h5 {
   font-size: 120px;
   margin-bottom: 50px;
 }
+
+.resultList {
+  padding: 20px 0px 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted gray;
+}
