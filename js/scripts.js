@@ -183,7 +183,7 @@ $(document).ready(function(){
     dateToNumber(inputDateEnd, inputDateEndToNumber);
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
-    var inputAge = $("#allage").val();
+    var inputAge = $("#ages").val();
 
     dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
     areaMatchLoop(inputArea);
