@@ -202,11 +202,21 @@ $(document).ready(function(){
     console.log(areaArray);
     console.log(genreArray);
     console.log(ageArray);
-    
-    // for (var i = 0; i < concertArray.length; i++) {
-    //   $("#concert-list").append(concertArray[i].dateMatch(inputDateBeginToNumber, inputDateEndToNumber));
-    // }
-
+    if (ageArray.length === 0){
+      $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
+    }
+    for (var i = 0; i < ageArray.length; i++) {
+      $("#concert-list").append('<div id="' + ageArray[i].bands + '"' +
+                                  '<span class="event-band-name">' + ageArray[i].bands + ' </span>' +
+                                  '<span class="event-date">' + ageArray[i].date + ' </span>' +
+                                  '<span class="event-time">' + ageArray[i].time + ' </span>' +
+                                  '<span class="event-age">' + ageArray[i].age + ' </span>' +
+                                  '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
+                                  '<span class="event-price">' + ageArray[i].price + ' </span>' +
+                                  '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
+                                  '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
+                                '</div>');
+    }
     $("#concert-list").show();
-  })
+  });
 });
