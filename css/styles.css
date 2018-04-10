@@ -1,6 +1,12 @@
+/*Navbar*/
+.navbar {
+  background: rgba(0, 0, 0, 0.5);
+  margin-bottom: -56px;
+}
+
 /*Header Jumbotron*/
 .jumbotron.jumbotron-fluid.header {
-  background-image: url(../imgs/content/header-jumbotron-bkgrnd.jpg);
+  background-image: url(../imgs/content/header-jumbotron-v2-bkgrnd.jpg);
   background-size: cover;
   background-position: center;
   padding-top: 100px;
