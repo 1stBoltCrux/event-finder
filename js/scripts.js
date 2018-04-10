@@ -64,6 +64,14 @@ var infectedMushroom = new Event(["Infected Mushroom"], [2018, 4, 29], "9:00 PM"
 var prettyLights = var Event(["Pretty Lights"], [2018, 4, 1], "7:00 PM", dantes, "21", "Electronic", 13);
 var skrillex = new Event(["Skrillex"], [2018, 4, 3], "8:00 PM", theKnow, "21", "Electronic", 42);
 
+var adele = new Event(["Adele"], [2018, 4, 7], "9:00 PM", schnitzer, "aa", "Pop", 110);
+var beyonce = new Event(["Beyonce"], [2018, 4, 9], "8:00 PM", crystalBallroom, "aa", "Pop", 120);
+var brunoMars = var Event(["Bruno Mars"], [2018, 4, 11], "6:00 PM", crystalBallroom, "aa", "Pop", 100);
+var justinTimberlake = new Event(["Justin Timberlake"], [2018, 4, 13], "7:00 PM", schnitzer, "aa", "Pop", 80);
+var katyPerry = var Event(["Katy Perry"], [2018, 4, 15], "10:00 PM", dantes, "21", "Pop", 90);
+var pink = new Event(["Pink"], [2018, 4, 17], "8:00 PM", dougFir, "21", "Pop", 66);
+var samSmith = new Event(["Sam Smith"]), [2018, 4, 19], "7:00 PM", dougFir, "aa", 45);
+
 //Back-end Logic
 var concertArray = [];
 
