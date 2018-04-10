@@ -16,6 +16,7 @@ function Venue(name, location) {
 
 var concertArray = [];
 var workingArray = [];
+var testArray = [];
 
 // VENUES //
 
@@ -132,6 +133,19 @@ function dateMatchLoop(array, array2) {
   for (var i = 0; i < concertArray.length; i++) {
     if (concertArray[i].date[2]>= array[2] && concertArray[i].date[2] <= array2[2]) {
       workingArray.push(concertArray[i]);
+      // testArray.push(concertArray[i]);
+      // console.log(testArray);
+    }
+  }
+}
+
+function areaMatchLoop(string) {
+  for (var i = 0; i < workingArray.length; i++) {
+    if (string === "All Areas") {
+      break;
+    } else if (workingArray[i].venue.location !== string) {
+    workingArray.splice((i-1), 1);
+    console.log("Hello?");
     }
   }
 }
@@ -188,8 +202,11 @@ $(document).ready(function(){
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
     var inputAge = $("#allage").val();
+    console.log(inputArea);
     dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
+    areaMatchLoop(inputArea);
     console.log(workingArray);
+
 
     // for (var i = 0; i < concertArray.length; i++) {
     //   $("#concert-list").append(concertArray[i].dateMatch(inputDateBeginToNumber, inputDateEndToNumber));
