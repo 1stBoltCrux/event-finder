@@ -1,5 +1,5 @@
 //BUSINESS LOGIC //
-function  Event(bands, date, time, venue, age, genre, price) {
+function  Event(bands, date, time, venue, age, genre, price, image) {
   this.bands = bands;
   this.date = date;
   this.time = time;
@@ -7,6 +7,7 @@ function  Event(bands, date, time, venue, age, genre, price) {
   this.age = age;
   this.genre = genre;
   this.price = price;
+  this.image = image;
 }
 
 function Venue(name, location) {
@@ -34,7 +35,7 @@ var dantes = new Venue("Dante's", "Southwest");
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest");
 
 // COUNTRY //
-var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "aa", "Country", 45);
+var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "aa", "Country", 45, "img/country/bradpaisley.jpg");
 concertArray.push(bradPaisley);
 var dariusRucker = new Event(["Darius Rucker"], [2018, 4, 4], "7:00 PM", schnitzer, "21", "Country", 70);
 concertArray.push(dariusRucker);
@@ -206,12 +207,9 @@ $(document).ready(function(){
                                   '<span class="event-price">' + ageArray[i].price + ' </span>' +
                                   '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
                                   '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
+                                  '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
                                 '</div>');
     }
     $("#concert-list").show();
-
-
-
   });
-
 });
