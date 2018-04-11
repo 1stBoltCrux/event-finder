@@ -6,11 +6,12 @@
 
 /*Header Jumbotron*/
 .jumbotron.jumbotron-fluid.header {
-  background-image: url(../imgs/content/header-jumbotron-v2-bkgrnd.jpg);
+  background-image: url(../imgs/content/ShowDog-Header-Animation-Bkgrnd.gif);
   background-size: cover;
   background-position: center;
-  padding-top: 100px;
+  padding-top: 500px;
   padding-bottom: 100px;
+  /*height: 600px;*/
   overflow: hidden;
 }
 
@@ -43,14 +44,14 @@
 
 /*Footer*/
 .container-fluid.footer {
-  background-color: black;
+  background-color: #1C3763;
   color: white;
   height: 350px;
   margin: 50px, 0, 50px, 0;
 }
 
 #footerNav {
-  background-color: black;
+  background-color: #cc3c21;
 }
 
 .centered {
@@ -60,12 +61,23 @@
 
 /*Fonts*/
 h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Fjalla One', serif;
+}
+
+h4 {
+  font-family: 'Fjalla One', serif;
+  margin-top: 25px;
 }
 
 h5 {
   margin-top: 30px;
 }
+
+#footerNav {
+  font-family: 'Fjalla One', serif;
+  letter-spacing: 2px;
+}
+
 #mainTitle {
   text-shadow: -2px -2px 10px #ffffff,
  2px -2px 10px #ffffff,
@@ -112,11 +124,37 @@ h5 {
   justify-content: space-between;
 }
 #resultText {
+font-family: 'Fjalla One', serif;
 text-align: center;
+}
+
+#listTitle {
+font-family: 'Fjalla One', serif;
+text-align: center;
+color: #1C3763;
 }
 
 #resultCard{
   margin-bottom: 25px;
+  background-color: #fff;
+}
+
+label {
+  font-family: 'Fjalla One', serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+}
+
+#submitButton {
+    background-color: #cc3c21;
+    font-family: 'Fjalla One', serif;
+    color: white;
+}
+
+#submitButton:hover {
+    background-color: #a8321c;
 }
 
 /*Modal*/
