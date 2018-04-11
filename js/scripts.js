@@ -16,11 +16,13 @@ function Venue(name, location, address) {
   this.address = address;
 }
 
+
 var concertArray = [];
 var dateArray = [];
 var areaArray = [];
 var genreArray = [];
 var ageArray = [];
+var ageArrayBandCamel = [];
 
 // VENUES //
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St, Portland, OR 97212");
@@ -36,7 +38,7 @@ var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St, Portland, OR 
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest", "1037 SW Broadway, Portland, OR 97205");
 
 // COUNTRY //
-var bradPaisley = new Event(["Brad Paisley", ""], [2018, 4, 2], "7:00 PM", crystalBallroom, "All Ages", "Country", 45, "imgs/country/bradpaisley.jpg");
+var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "All Ages", "Country", 45, "imgs/country/bradpaisley.jpg");
 concertArray.push(bradPaisley);
 var dariusRucker = new Event(["Darius Rucker"], [2018, 4, 4], "7:00 PM", schnitzer, "21+", "Country", 70, "imgs/country/dariusrucker.jpg");
 concertArray.push(dariusRucker);
@@ -166,6 +168,13 @@ function ageMatchLoop(string) {
   }
 }
 
+//AGEARRAY TO CAMEL CASE
+function ageArrayBandToCamel() {
+  for (var i = 0; i < ageArray.length; i++) {
+    ageArrayBandCamel.push(ageArray[i].bands[0].split(" ").join(""));
+  }
+}
+
 // DATE STRING ARRAY TO NUMBER ARRAY //
 var inputDateBeginToNumber = [];
 var inputDateEndToNumber = [];
@@ -191,24 +200,56 @@ $(document).ready(function(){
     areaMatchLoop(inputArea);
     genreMatchLoop(inputGenre);
     ageMatchLoop(inputAge);
+    ageArrayBandToCamel();
     console.log(dateArray);
     console.log(areaArray);
     console.log(genreArray);
     console.log(ageArray);
+    console.log(ageArrayBandCamel);
     if (ageArray.length === 0){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
     }
     for (var i = 0; i < ageArray.length; i++) {
       $("#concert-list").append('<div class="resultList">' +
-                                  '<h3><span class="event-band-name">' + ageArray[i].bands + ' </span></h3>' +
+                                  '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a>' +
+                                  '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<span class="event-date">' + ageArray[i].date + ' </span>' +
                                   '<span class="event-time">' + ageArray[i].time + ' </span>' +
-                                  '<span class="event-age">' + ageArray[i].age + ' </span>' +
-                                  '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
-                                  '<span class="event-price">' + ageArray[i].price + ' </span>' +
+                                  // '<span class="event-age">' + ageArray[i].age + ' </span>' +
+                                  // '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
+                                  // '<span class="event-price">' + ageArray[i].price + ' </span>' +
                                   '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
-                                  '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
-                                  '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                  // '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
+                                '</div>' +
+                                '<div class="modal fade ' + ageArrayBandCamel[i] + '">' +
+                                  '<div class="modal-dialog">' +
+                                    '<div class="modal-content">' +
+                                      // <!-- Modal Header -->
+                                      '<div class="modal-header">' +
+                                        '<h4 class="modal-title">' + ageArray[i].bands + '</h4>' +
+                                        '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+                                      '</div>' +
+                                      // <!-- Modal body -->
+                                      '<div class="modal-body">' +
+                                        '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
+                                        '<div>' +
+                                          '<span class="event-date">' + ageArray[i].date + '</span>' +
+                                          '<span class="event-time">' +ageArray[i].time + '</span>' +
+                                          '<span class="event-age">' + ageArray[i].age + '</span>' +
+                                          '<span class="event-genre">' + ageArray[i].genre + '</span>' +
+                                          '<span class="event-price">' + ageArray[i].price + '</span>' +
+                                          '<span class="event-venue">' + ageArray[i].venue.name + '</span>' +
+                                          '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
+                                          // '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                        '</div>' +
+                                      '</div>' +
+
+                                      // <!-- Modal footer -->
+                                      '<div class="modal-footer">' +
+                                        '<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>' +
+                                      '</div>' +
+                                    '</div>' +
+                                  '</div>' +
                                 '</div>');
     }
     $("#concert-list").show();
