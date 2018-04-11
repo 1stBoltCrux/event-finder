@@ -72,6 +72,48 @@
 
 <!-- Begin Output List -->
 <div class="container">
+  <div id="concert-list">
+    <div class="resultList">
+      <a href="#" data-toggle="modal" data-target=".ageArray[i]bands"><h3><span class="event-band-name ageArray[i].bands">ageArray[i].bands</span></h3></a>
+      <span class="event-date">ageArray[i].date</span>
+      <span class="event-venue">ageArray[i].venue.name</span>
+      <a href="#" data-toggle="modal" data-target=".ageArray[i]bands"><span class="event-image ageArray[i].bands"><img src="ageArray[i].image" alt="a band"></span></a>
+    </div>
+  </div>
+</div>
+<div class="modal fade ageArray[i]bands" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">ageArray[i].bands</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <img class="modalImage" src="ageArray[i].image" alt="Brad Paisley">
+        <div>
+          <span class="event-date">ageArray[i].date</span>
+          <span class="event-time">ageArray[i].time</span>
+          <span class="event-age">ageArray[i].age</span>
+          <span class="event-genre">ageArray[i].genre</span>
+          <span class="event-price">ageArray[i].price</span>
+          <span class="event-venue">ageArray[i].venue.name</span>
+          <span class="event-location">ageArray[i].venue.location</span>
+          <span class="event-image"><img src="ageArray[i].image" alt="a band"></span>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
   <div class="no-display" id="concert-list">
 
   </div>
