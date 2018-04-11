@@ -133,3 +133,7 @@ h5 {
 #resultText {
 text-align: center;
 }
+
+#resultCard{
+  margin-bottom: 25px;
+}

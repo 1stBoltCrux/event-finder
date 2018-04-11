@@ -199,7 +199,7 @@ $(document).ready(function(){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
     }
     for (var i = 0; i < ageArray.length; i++) {
-      $("#concert-list").append('<div class="card" style="width: 18rem;">' +
+      $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
                                   // '<div class="picDiv">' +
                                     // '<span class="event-image">'
                                     '<img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band">' +
@@ -208,7 +208,7 @@ $(document).ready(function(){
                                   '<div class="card-body" id="resultText">' +
                                     '<h3><span class="event-band-name">' + ageArray[i].bands + ' </span></h3><br>' +
                                     '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
-                                    '<span class="event-date">' + ageArray[i].date + ' </span><br>' +
+                                    '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
                                   //   '<span class="event-age">' + ageArray[i].age + ' </span>' +
                                   //   '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
