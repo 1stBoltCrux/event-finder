@@ -8,34 +8,37 @@ function  Event(bands, date, time, venue, age, genre, price, image) {
   this.genre = genre;
   this.price = price;
   this.image = image;
+  this.showInfo = "Lorem ipsum dolor sit amet, consectetur GREAT BAND adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute CLEAN BATHROOMS irure dolor in reprehenderit in voluptate velit CHEAP DRINKS esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt GUARANTEED TO GET SOME mollit anim id est laborum."
 }
 
-function Venue(name, location, address) {
+function Venue(name, location, address1, address2, website) {
   this.name = name;
   this.location = location;
-  this.address = address;
+  this.address1 = address1;
+  this.address2 = address2;
+  this.website = website;
 }
 
 
 var concertArray = [];
-var dateArray = [];
-var areaArray = [];
-var genreArray = [];
-var ageArray = [];
-var ageArrayBandCamel = [];
+// var dateArray = [];
+// var areaArray = [];
+// var genreArray = [];
+// var ageArray = [];
+// var ageArrayBandCamel = [];
 
 // VENUES //
-var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St, Portland, OR 97212");
-var theKnow = new Venue("The Know", "Northeast", "3728 NE Sandy Blvd, Portland, OR 97232");
-var mississippiStudios = new Venue("Mississippi Studios", "Northeast", "3939 N Mississippi Ave, Portland, OR 97227");
-var roselandTheater = new Venue("Roseland Theater", "Northwest", "8 NW 6th Ave, Portland, OR 97209");
-var starTheater = new Venue("Star Theater", "Northwest", "13 NW 6th Ave, Portland, OR 97209");
-var dougFir = new Venue("The Doug Fir Lounge", "Southeast", "830 E Burnside St, Portland, OR 97214");
-var bunkBar = new Venue("Bunk Bar", "Southeast", "1028 SE Water Ave, Portland, OR 97214");
-var analogCafe = new Venue("The Analog Cafe", "Southeast", "720 SE Hawthorne Blvd, Portland, OR 97214");
-var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest", "1332 W Burnside St, Portland, OR 97209");
-var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St, Portland, OR 97209");
-var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest", "1037 SW Broadway, Portland, OR 97205");
+var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St.", "Portland, OR 97212", "https://www.wonderballroom.com/");
+var theKnow = new Venue("The Know", "Northeast", "3728 NE Sandy Blvd.", "Portland, OR 97232", "http://www.theknowpdx.com/");
+var mississippiStudios = new Venue("Mississippi Studios", "Northeast", "3939 N Mississippi Ave.", "Portland, OR 97227", "https://www.mississippistudios.com/");
+var roselandTheater = new Venue("Roseland Theater", "Northwest", "8 NW 6th Ave.", "Portland, OR 97209", "http://roselandpdx.com/");
+var starTheater = new Venue("Star Theater", "Northwest", "13 NW 6th Ave.", "Portland, OR 97209", "http://startheaterportland.com/");
+var dougFir = new Venue("The Doug Fir Lounge", "Southeast", "830 E Burnside St.", "Portland, OR 97214", "https://www.dougfirlounge.com/");
+var bunkBar = new Venue("Bunk Bar", "Southeast", "1028 SE Water Ave.", "Portland, OR 97214", "http://www.bunksandwiches.com/shows/");
+var analogCafe = new Venue("The Analog Cafe", "Southeast", "720 SE Hawthorne Blvd.", "Portland, OR 97214", "http://www.analogpdx.com/");
+var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest", "1332 W Burnside St.", "Portland, OR 97209", "https://www.crystalballroompdx.com/");
+var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St.", "Portland, OR 97209", "https://danteslive.com/");
+var schnitzer = new Venue("The Arlene Schnitzer", "Southwest", "1037 SW Broadway", "Portland, OR 97205", "https://www.portland5.com/arlene-schnitzer-concert-hall");
 
 // COUNTRY //
 var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "All Ages", "Country", 45, "imgs/country/bradpaisley.jpg");
@@ -131,71 +134,103 @@ concertArray.push(samSmith);
 
 // SEARCH FILTER FUNCTIONS //
 function dateMatchLoop(array, array2) {
+  var dateArray = [];
   for (var i = 0; i < concertArray.length; i++) {
     if (concertArray[i].date[2]>= array[2] && concertArray[i].date[2] <= array2[2]) {
       dateArray.push(concertArray[i]);
     }
   }
+  return dateArray;
 }
 
-function areaMatchLoop(string) {
-  for (var i = 0; i < dateArray.length; i++) {
+function areaMatchLoop(string, array) {
+  var areaArray = [];
+  for (var i = 0; i < array.length; i++) {
     if (string === "All Areas") {
-      areaArray = dateArray;
-    } else if (dateArray[i].venue.location === string) {
-    areaArray.push(dateArray[i]);
+      areaArray = array;
+    } else if (array[i].venue.location === string) {
+    areaArray.push(array[i]);
     }
   }
+  return areaArray;
 }
 
-function genreMatchLoop(string) {
-  for (var i = 0; i < areaArray.length; i++) {
+function genreMatchLoop(string, array) {
+  var genreArray = [];
+  for (var i = 0; i < array.length; i++) {
     if (string === "All Genres") {
-      genreArray = areaArray;
-    } else if (areaArray[i].genre === string) {
-    genreArray.push(areaArray[i]);
+      genreArray = array;
+    } else if (array[i].genre === string) {
+    genreArray.push(array[i]);
     }
   }
+  return genreArray;
 }
 
-function ageMatchLoop(string) {
-  for (var i = 0; i < genreArray.length; i++) {
+function ageMatchLoop(string, array) {
+  var ageArray = [];
+  for (var i = 0; i < array.length; i++) {
     if (string === "allShows") {
-      ageArray = genreArray;
-    } else if (genreArray[i].age === string) {
-    ageArray.push(genreArray[i]);
+      ageArray = array;
+    } else if (array[i].age === string) {
+    ageArray.push(array[i]);
     }
   }
+  return ageArray;
 }
 
 //AGEARRAY ORDERED CHRONOLOGICALLY
-function ageArrayOrder() {
-  ageArray.sort(function(a,b) {
+function ageArrayOrder(array) {
+  array.sort(function(a,b) {
     return a.date[2] - b.date[2];
   });
 }
 
 
 //AGEARRAY TO CAMEL CASE
-function ageArrayBandToCamel() {
-  for (var i = 0; i < ageArray.length; i++) {
-    ageArrayBandCamel.push(ageArray[i].bands[0].split(" ").join(""));
+function ageArrayBandToCamel(array) {
+  ageArrayBandCamel = [];
+  for (var i = 0; i < array.length; i++) {
+    ageArrayBandCamel.push(array[i].bands[0].split(" ").join(""));
+  }
+  return ageArrayBandCamel;
+}
+
+//DATE MONTH NUMBER TO STRING
+function monthNumberToString(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].date[1] === 4) {
+      array[i].date[1] = "April";
+    }
   }
 }
 
+//CLEAR ARRAYS
+function clearFields() {
+  dateArray = [];
+  areaArray = [];
+  genreArray = [];
+  ageArray = [];
+  ageArrayBandCamel = [];
+}
+
 // DATE STRING ARRAY TO NUMBER ARRAY //
-var inputDateBeginToNumber = [];
-var inputDateEndToNumber = [];
 function dateToNumber(array, array2){
+  // var inputDateBeginToNumber = [];
+  // var inputDateEndToNumber = [];
   array.forEach(function(element){
     array2.push(parseInt(element))
   });
+  return array2;
 }
 
 //UI LOGIC //
 $(document).ready(function(){
   $("#properties-search").submit(function(event){
   event.preventDefault();
+    $(".list-div").remove();
+    var inputDateBeginToNumber = [];
+    var inputDateEndToNumber = [];
     var inputDateBegin = $("#dateBegin").val().split("-");
     var inputDateEnd = $("#dateEnd").val().split("-");
     dateToNumber(inputDateBegin, inputDateBeginToNumber);
@@ -204,12 +239,13 @@ $(document).ready(function(){
     var inputGenre = $("#genre").val();
     var inputAge = $("#ages").val();
 
-    dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
-    areaMatchLoop(inputArea);
-    genreMatchLoop(inputGenre);
-    ageMatchLoop(inputAge);
-    ageArrayOrder();
-    ageArrayBandToCamel();
+    var dateArray = dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
+    var areaArray = areaMatchLoop(inputArea, dateArray);
+    var genreArray = genreMatchLoop(inputGenre, areaArray);
+    var ageArray = ageMatchLoop(inputAge, genreArray);
+    ageArrayOrder(ageArray);
+    var ageArrayBandCamel = ageArrayBandToCamel(ageArray);
+    monthNumberToString(ageArray);
     console.log(dateArray);
     console.log(areaArray);
     console.log(genreArray);
@@ -220,12 +256,12 @@ $(document).ready(function(){
     }
     for (var i = 0; i < ageArray.length; i++) {
 
-      $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
+      $("#concert-list").append('<div class="card list-div" id="resultCard" style="width: 18rem;">' +
                                   '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<div class="card-body" id="resultText">' +
                                     '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a><br>' +
-                                    '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
-                                    '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
+                                    '<span class="event-venue lead"><a href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
+                                    '<span class="event-date">' + ageArray[i].date[1] + ' ' + ageArray[i].date[2] + ', ' + ageArray[i].date[0] + ' </span><br>' +
                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
                                   '</div>' +
                                   '<div class="modal fade ' + ageArrayBandCamel[i] + '">' +
@@ -233,21 +269,30 @@ $(document).ready(function(){
                                       '<div class="modal-content">' +
                                         // <!-- Modal Header -->
                                         '<div class="modal-header">' +
-                                          '<h4 class="modal-title" id="listTitle">' + ageArray[i].bands + '</h4>' +
+                                          '<h4 class="modal-title">' + ageArray[i].bands + '<span class="title-venue"> @ ' + ageArray[i].venue.name +  '</span></h4>' +
                                           '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
                                         '</div>' +
                                         // <!-- Modal body -->
-                                        '<div class="modal-body">' +
-                                          '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
-                                          '<div>' +
-                                            '<span class="event-date">' + ageArray[i].date + '</span>' +
-                                            '<span class="event-time">' +ageArray[i].time + '</span>' +
-                                            '<span class="event-age">' + ageArray[i].age + '</span>' +
-                                            '<span class="event-genre">' + ageArray[i].genre + '</span>' +
-                                            '<span class="event-price">' + ageArray[i].price + '</span>' +
-                                            '<span class="event-venue">' + ageArray[i].venue.name + '</span>' +
-                                            '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
-                                            // '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                        '<div class="modal-body listModal">' +
+                                          '<div class="listModalImageContainer">' +
+                                            '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
+                                          '</div>' +
+                                          '<div class="row show-info">' +
+                                            '<div class="col left">' +
+                                              '<span class="event-date">' + ageArray[i].date[1] + ' ' + ageArray[i].date[2] + ', ' + ageArray[i].date[0] + '</span><br>' +
+                                              '<span class="event-time">' + ageArray[i].time + '</span><br>' +
+                                              '<span class="event-price float-left"> $' + ageArray[i].price + '</span>' +
+                                              '<span class="event-age float-right">' + ageArray[i].age + '</span><br>' +
+                                            '</div>' +
+                                            '<div class="col right">' +
+                                              '<span class="event-venue"><a href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
+                                              '<span class="event-venue-address1">' + ageArray[i].venue.address1 + ' </span><br>' +
+                                              '<span class="event-venue-address2">' + ageArray[i].venue.address2 + ' </span><br>' +
+                                            '</div>' +
+                                          '</div>' +
+                                          '<div class="row show-info">' +
+                                            '<h5 class="bold"> Show Info:</h5><br>' +
+                                            '<span>' + ageArray[i].showInfo + '</span>' +
                                           '</div>' +
                                         '</div>' +
                                       // <!-- Modal footer -->

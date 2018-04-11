@@ -58,23 +58,6 @@
   margin: auto;
   color: #fff;
 }
-/*.image {
-  height: 300px;
-  background-image: url(../imgs/content/header-jumbotron-v2-bkgrnd.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  width: 100%;
-}
-
-#overlay {
-  height: 300px;
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 300 px;
-  left: 0;
-  width: 100%;
-}*/
 
 /*Fonts*/
 h1 {
@@ -113,8 +96,6 @@ h5 {
   border-bottom: 2px dotted gray;
   background-color: grey;
   border-radius: 15px 50px;;
-
-
 }
 
 .event-image {
@@ -174,4 +155,45 @@ label {
 
 #submitButton:hover {
     background-color: #a8321c;
+}
+
+/*Modal*/
+.title-venue {
+  color: dimgray;
+}
+
+.listModalImageContainer {
+  border-bottom: solid gray 2px;
+  width: 400px;
+
+}
+.modalImage {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.listModal {
+  margin: auto;
+}
+
+.left, .right {
+  background-color: #eff0f1;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.event-venue, .event-date {
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.show-info {
+  width: 400px;
+  margin: auto;
 }
