@@ -8,12 +8,14 @@ function  Event(bands, date, time, venue, age, genre, price, image) {
   this.genre = genre;
   this.price = price;
   this.image = image;
+  this.showInfo = "Lorem ipsum dolor sit amet, consectetur GREAT BAND adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute CLEAN BATHROOMS irure dolor in reprehenderit in voluptate velit CHEAP DRINKS esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt GUARANTEED TO GET SOME mollit anim id est laborum."
 }
 
-function Venue(name, location, address) {
+function Venue(name, location, address1, address2) {
   this.name = name;
   this.location = location;
-  this.address = address;
+  this.address1 = address1;
+  this.address2 = address2;
 }
 
 
@@ -25,17 +27,17 @@ var ageArray = [];
 var ageArrayBandCamel = [];
 
 // VENUES //
-var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St, Portland, OR 97212");
-var theKnow = new Venue("The Know", "Northeast", "3728 NE Sandy Blvd, Portland, OR 97232");
-var mississippiStudios = new Venue("Mississippi Studios", "Northeast", "3939 N Mississippi Ave, Portland, OR 97227");
-var roselandTheater = new Venue("Roseland Theater", "Northwest", "8 NW 6th Ave, Portland, OR 97209");
-var starTheater = new Venue("Star Theater", "Northwest", "13 NW 6th Ave, Portland, OR 97209");
-var dougFir = new Venue("The Doug Fir Lounge", "Southeast", "830 E Burnside St, Portland, OR 97214");
-var bunkBar = new Venue("Bunk Bar", "Southeast", "1028 SE Water Ave, Portland, OR 97214");
-var analogCafe = new Venue("The Analog Cafe", "Southeast", "720 SE Hawthorne Blvd, Portland, OR 97214");
-var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest", "1332 W Burnside St, Portland, OR 97209");
-var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St, Portland, OR 97209");
-var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest", "1037 SW Broadway, Portland, OR 97205");
+var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St,", "Portland, OR 97212");
+var theKnow = new Venue("The Know", "Northeast", "3728 NE Sandy Blvd,", "Portland, OR 97232");
+var mississippiStudios = new Venue("Mississippi Studios", "Northeast", "3939 N Mississippi Ave,", "Portland, OR 97227");
+var roselandTheater = new Venue("Roseland Theater", "Northwest", "8 NW 6th Ave,", "Portland, OR 97209");
+var starTheater = new Venue("Star Theater", "Northwest", "13 NW 6th Ave,", "Portland, OR 97209");
+var dougFir = new Venue("The Doug Fir Lounge", "Southeast", "830 E Burnside St,", "Portland, OR 97214");
+var bunkBar = new Venue("Bunk Bar", "Southeast", "1028 SE Water Ave, Portland,", "OR 97214");
+var analogCafe = new Venue("The Analog Cafe", "Southeast", "720 SE Hawthorne Blvd,", "Portland, OR 97214");
+var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest", "1332 W Burnside St,", "Portland, OR 97209");
+var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St,", "Portland, OR 97209");
+var schnitzer = new Venue("The Arlene Schnitzer", "Southwest", "1037 SW Broadway,", "Portland, OR 97205");
 
 // COUNTRY //
 var bradPaisley = new Event(["Brad Paisley"], [2018, 4, 2], "7:00 PM", crystalBallroom, "All Ages", "Country", 45, "imgs/country/bradpaisley.jpg");
@@ -237,19 +239,26 @@ $(document).ready(function(){
                                           '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
                                         '</div>' +
                                         // <!-- Modal body -->
-                                        '<div class="modal-body">' +
-                                          '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
-                                          '<div class="row">' +
-                                            '<div class="col">' +
-                                              '<span class="event-genre">' + ageArray[i].genre + '</span>' +
-                                              '<span class="event-price">' + ageArray[i].price + '</span>' +
-                                              '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
+                                        '<div class="modal-body listModal">' +
+                                          '<div class="listModalImageContainer">' +
+                                            '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
+                                          '</div>' +
+                                          '<div class="row show-info">' +
+                                            '<div class="col left">' +
+                                              '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' ' + ageArray[i].time +'</span><br>' +
+                                              // '<span class="event-time">' + ageArray[i].time + '</span><br>' +
+                                              '<span class="event-price"> $' + ageArray[i].price + '</span><br>' +
+                                              '<span class="event-age">' + ageArray[i].age + '</span><br>' +
                                             '</div>' +
-                                            '<div class="col">' +
-                                              '<span class="event-date">' + ageArray[i].date + '</span>' +
-                                              '<span class="event-time">' +ageArray[i].time + '</span>' +
-                                              '<span class="event-age">' + ageArray[i].age + '</span>' +
+                                            '<div class="col right">' +
+                                              '<span class="event-venue">' + ageArray[i].venue.name + ' </span><br>' +
+                                              '<span class="event-venue-address1">' + ageArray[i].venue.address1 + ' </span><br>' +
+                                              '<span class="event-venue-address2">' + ageArray[i].venue.address2 + ' </span><br>' +
                                             '</div>' +
+                                          '</div>' +
+                                          '<div class="row show-info">' +
+                                            '<h5 class="bold"> Show Info:</h5><br>' +
+                                            '<span>' + ageArray[i].showInfo + '</span>' +
                                           '</div>' +
                                         '</div>' +
                                       // <!-- Modal footer -->

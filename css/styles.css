@@ -123,3 +123,38 @@ text-align: center;
 .title-venue {
   color: dimgray;
 }
+
+.listModalImageContainer {
+  border-bottom: solid gray 2px;
+  width: 400px;
+
+}
+.modalImage {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.listModal {
+  margin: auto;
+}
+
+.left, .right {
+  background-color: #eff0f1;
+  margin: 10px;
+}
+
+.event-venue {
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+.show-info {
+  width: 400px;
+  margin: auto;
+}
