@@ -159,7 +159,7 @@ label {
 
 /*Modal*/
 .title-venue {
-  color: dimgray;
+  color: darkgrey;
 }
 
 .listModalImageContainer {
@@ -196,4 +196,12 @@ label {
 .show-info {
   width: 400px;
   margin: auto;
+}
+
+.return-modal-header {
+  background-color: #336497;
+}
+
+.return-close {
+  color: white;
 }

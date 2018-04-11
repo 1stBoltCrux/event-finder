@@ -21,11 +21,7 @@ function Venue(name, location, address1, address2, website) {
 
 
 var concertArray = [];
-// var dateArray = [];
-// var areaArray = [];
-// var genreArray = [];
-// var ageArray = [];
-// var ageArrayBandCamel = [];
+
 
 // VENUES //
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St.", "Portland, OR 97212", "https://www.wonderballroom.com/");
@@ -216,8 +212,6 @@ function clearFields() {
 
 // DATE STRING ARRAY TO NUMBER ARRAY //
 function dateToNumber(array, array2){
-  // var inputDateBeginToNumber = [];
-  // var inputDateEndToNumber = [];
   array.forEach(function(element){
     array2.push(parseInt(element))
   });
@@ -238,7 +232,6 @@ $(document).ready(function(){
     var inputArea = $("#area").val();
     var inputGenre = $("#genre").val();
     var inputAge = $("#ages").val();
-
     var dateArray = dateMatchLoop(inputDateBeginToNumber, inputDateEndToNumber);
     var areaArray = areaMatchLoop(inputArea, dateArray);
     var genreArray = genreMatchLoop(inputGenre, areaArray);
@@ -268,9 +261,9 @@ $(document).ready(function(){
                                     '<div class="modal-dialog">' +
                                       '<div class="modal-content">' +
                                         // <!-- Modal Header -->
-                                        '<div class="modal-header">' +
+                                        '<div class="modal-header return-modal-header">' +
                                           '<h4 class="modal-title">' + ageArray[i].bands + '<span class="title-venue"> @ ' + ageArray[i].venue.name +  '</span></h4>' +
-                                          '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+                                          '<button type="button" class="close return-close" data-dismiss="modal">&times;</button>' +
                                         '</div>' +
                                         // <!-- Modal body -->
                                         '<div class="modal-body listModal">' +
