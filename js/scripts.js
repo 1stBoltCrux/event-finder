@@ -212,71 +212,42 @@ $(document).ready(function(){
     for (var i = 0; i < ageArray.length; i++) {
 
       $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
-//       $("#concert-list").append('<div class="resultList">' +
-//                                   '<img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band">' +
-                                  '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
+                                  '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<div class="card-body" id="resultText">' +
                                     '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a><br>' +
-//                                     '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                     '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
                                     '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
-//                                     '<span class="event-date">' + ageArray[i].date + ' </span>' +
-//                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
-                                     // '<span class="event-age">' + ageArray[i].age + ' </span>' +
-                                    // '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
-                                    // '<span class="event-price">' + ageArray[i].price + ' </span>' +
-//                                     '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
-                                  // '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
-                                '</div>' +
-                                '<div class="modal fade ' + ageArrayBandCamel[i] + '">' +
-                                  '<div class="modal-dialog">' +
-                                    '<div class="modal-content">' +
-                                      // <!-- Modal Header -->
-                                      '<div class="modal-header">' +
-                                        '<h4 class="modal-title">' + ageArray[i].bands + '</h4>' +
-                                        '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
-                                      '</div>' +
-                                      // <!-- Modal body -->
-                                      '<div class="modal-body">' +
-                                        '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
-                                        '<div>' +
-                                          '<span class="event-date">' + ageArray[i].date + '</span>' +
-                                          '<span class="event-time">' +ageArray[i].time + '</span>' +
-                                          '<span class="event-age">' + ageArray[i].age + '</span>' +
-                                          '<span class="event-genre">' + ageArray[i].genre + '</span>' +
-                                          '<span class="event-price">' + ageArray[i].price + '</span>' +
-                                          '<span class="event-venue">' + ageArray[i].venue.name + '</span>' +
-                                          '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
-                                          // '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                  '</div>' +
+                                  '<div class="modal fade ' + ageArrayBandCamel[i] + '">' +
+                                    '<div class="modal-dialog">' +
+                                      '<div class="modal-content">' +
+                                        // <!-- Modal Header -->
+                                        '<div class="modal-header">' +
+                                          '<h4 class="modal-title">' + ageArray[i].bands + '</h4>' +
+                                          '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
+                                        '</div>' +
+                                        // <!-- Modal body -->
+                                        '<div class="modal-body">' +
+                                          '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
+                                          '<div>' +
+                                            '<span class="event-date">' + ageArray[i].date + '</span>' +
+                                            '<span class="event-time">' +ageArray[i].time + '</span>' +
+                                            '<span class="event-age">' + ageArray[i].age + '</span>' +
+                                            '<span class="event-genre">' + ageArray[i].genre + '</span>' +
+                                            '<span class="event-price">' + ageArray[i].price + '</span>' +
+                                            '<span class="event-venue">' + ageArray[i].venue.name + '</span>' +
+                                            '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
+                                            // '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                          '</div>' +
+                                        '</div>' +
+                                      // <!-- Modal footer -->
+                                        '<div class="modal-footer">' +
+                                          '<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>' +
                                         '</div>' +
                                       '</div>' +
-
-                                      // <!-- Modal footer -->
-                                      '<div class="modal-footer">' +
-                                        '<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>' +
-                                      '</div>' +
                                     '</div>' +
-                                  '</div>' +
-
-//       $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
-                                  // '<div class="picDiv">' +
-                                    // '<span class="event-image">'
-//                                     '<img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band">' +
-                                    // </span>' +
-                                  // '</div>' +
-//                                   '<div class="card-body" id="resultText">' +
-//                                     '<h3><span class="event-band-name">' + ageArray[i].bands + ' </span></h3><br>' +
-//                                     '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
-//                                     '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
-//                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
-                                  //   '<span class="event-age">' + ageArray[i].age + ' </span>' +
-                                  //   '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
-                                  //   '<span class="event-price">' + ageArray[i].price + ' </span>' +
-                                  //   '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
-                                  // '</div>' +
-
-                                '</div>');
+                                  '</div>');
     }
     $("#concert-list").show();
   });
