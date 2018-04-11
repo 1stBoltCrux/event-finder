@@ -52,13 +52,13 @@ var rascalFlats = new Event(["Rascal Flats"], [2018, 4, 12], "7:00 PM", wonderBa
 concertArray.push(rascalFlats);
 
 //HIPHOP//
-var asapRocky = new Event(["A$AP Rocky"], [2018, 4, 1], "7:00 PM", dantes, "21+", "Hip-Hop", 45, "imgs/hiphop/asaprocky.jpg");
+var asapRocky = new Event(["ASAP Rocky"], [2018, 4, 1], "7:00 PM", dantes, "21+", "Hip-Hop", 45, "imgs/hiphop/asaprocky.jpg");
 concertArray.push(asapRocky);
 var chanceTheRapper = new Event(["Chance the Rapper"], [2018, 4, 3], "9:00 PM", analogCafe, "21+", "Hip-Hop", 14, "imgs/hiphop/chancetherapper.jpg");
 concertArray.push(chanceTheRapper);
 var deLaSoul = new Event(["De La Soul"], [2018, 4, 7], "6:00 PM", dougFir, "All Ages", "Hip-Hop", 33, "imgs/hiphop/delasoul.jpg");
 concertArray.push(deLaSoul);
-var joeyBadass = new Event(["Joey Bada$$"], [2018, 4, 9], "8:00 PM", mississippiStudios, "All Ages", "Hip-Hop", 22, "imgs/hiphop/joeybadass.jpg");
+var joeyBadass = new Event(["Joey Badass"], [2018, 4, 9], "8:00 PM", mississippiStudios, "All Ages", "Hip-Hop", 22, "imgs/hiphop/joeybadass.jpg");
 concertArray.push(joeyBadass);
 var kanyeWest = new Event(["Kanye West"], [2018, 4, 11], "7:00 PM", theKnow, "All Ages", "Hip-Hop", 90, "imgs/hiphop/kanyewest.jpg");
 concertArray.push(kanyeWest);
