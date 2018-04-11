@@ -228,6 +228,7 @@ function dateToNumber(array, array2){
 $(document).ready(function(){
   $("#properties-search").submit(function(event){
   event.preventDefault();
+    $(".list-div").remove();
     var inputDateBeginToNumber = [];
     var inputDateEndToNumber = [];
     var inputDateBegin = $("#dateBegin").val().split("-");
@@ -255,7 +256,7 @@ $(document).ready(function(){
     }
     for (var i = 0; i < ageArray.length; i++) {
 
-      $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
+      $("#concert-list").append('<div class="card list-div" id="resultCard" style="width: 18rem;">' +
                                   '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<div class="card-body" id="resultText">' +
                                     '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a><br>' +
