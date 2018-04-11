@@ -32,7 +32,7 @@ var roselandTheater = new Venue("Roseland Theater", "Northwest", "8 NW 6th Ave, 
 var starTheater = new Venue("Star Theater", "Northwest", "13 NW 6th Ave, Portland, OR 97209");
 var dougFir = new Venue("The Doug Fir Lounge", "Southeast", "830 E Burnside St, Portland, OR 97214");
 var bunkBar = new Venue("Bunk Bar", "Southeast", "1028 SE Water Ave, Portland, OR 97214");
-var analogCafe = new Venue("The Analaog Cafe", "Southeast", "720 SE Hawthorne Blvd, Portland, OR 97214");
+var analogCafe = new Venue("The Analog Cafe", "Southeast", "720 SE Hawthorne Blvd, Portland, OR 97214");
 var crystalBallroom = new Venue("The Crystal Ballroom", "Southwest", "1332 W Burnside St, Portland, OR 97209");
 var dantes = new Venue("Dante's", "Southwest", "350 W Burnside St, Portland, OR 97209");
 var schnitzer = new Venue("The Arlene Schnitzer Concert Hall", "Southwest", "1037 SW Broadway, Portland, OR 97205");
@@ -96,7 +96,7 @@ var theSword = new Event(["The Sword"], [2018, 4, 1], "9:00 PM", theKnow, "21+",
 concertArray.push(theSword);
 var violentFemmes = new Event(["Violent Femmes"], [2018, 4, 3], "7:00 PM", schnitzer, "21+", "Rock", 70, "imgs/rock/violentfemmes.jpg");
 concertArray.push(violentFemmes);
-var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississippiStudios, "21+", "Rock", 35, "imgs/rock/ziggmarley.jpg");
+var ziggyMarley = new Event(["Ziggy Marley"], [2018, 4, 5], "7:00 PM", mississippiStudios, "21+", "Rock", 35, "imgs/rock/ziggymarley.jpg");
 concertArray.push(ziggyMarley);
 
 // ELECTRONIC //
@@ -106,7 +106,7 @@ var davidGuetta = new Event(["David Guetta"], [2018, 4, 25], "8:00 PM", crystalB
 concertArray.push(davidGuetta);
 var deadMaus = new Event(["Deadmaus"], [2018, 4, 27], "7:00 PM", roselandTheater, "All Ages", "Electronic", 50, "imgs/electronic/deadmaus.jpg");
 concertArray.push(deadMaus);
-var infectedMushroom = new Event(["Infected Mushroom"], [2018, 4, 29], "9:00 PM", wonderBallroom, "21+", "Electronic", 14, "imgs/electronic/infectedmushroom.jpg");
+var infectedMushroom = new Event(["Infected Mushroom"], [2018, 4, 29], "9:00 PM", wonderBallroom, "21+", "Electronic", 14, "imgs/electronic/infectedmushrooms.jpg");
 concertArray.push(infectedMushroom);
 var prettyLights = new Event(["Pretty Lights"], [2018, 4, 1], "7:00 PM", dantes, "21+", "Electronic", 13, "imgs/electronic/prettylights.jpg");
 concertArray.push(prettyLights);
@@ -210,15 +210,23 @@ $(document).ready(function(){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
     }
     for (var i = 0; i < ageArray.length; i++) {
-      $("#concert-list").append('<div class="resultList">' +
-                                  '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a>' +
-                                  '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img src="' + ageArray[i].image + '" alt="a band"></span></a>' +
-                                  '<span class="event-date">' + ageArray[i].date + ' </span>' +
-                                  '<span class="event-time">' + ageArray[i].time + ' </span>' +
-                                  // '<span class="event-age">' + ageArray[i].age + ' </span>' +
-                                  // '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
-                                  // '<span class="event-price">' + ageArray[i].price + ' </span>' +
-                                  '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
+
+      $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
+//       $("#concert-list").append('<div class="resultList">' +
+//                                   '<img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band">' +
+                                  '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
+                                  '<div class="card-body" id="resultText">' +
+                                    '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a><br>' +
+//                                     '<a href="#" data-toggle="modal" data-target=".' + ageArray[i].bands + '"><span class="event-image' + ageArray[i].bands +'"><img src="' + ageArray[i].image + '" alt="a band"></span></a>' +
+                                    '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
+                                    '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
+                                    '<span class="event-time">' + ageArray[i].time + ' </span>' +
+//                                     '<span class="event-date">' + ageArray[i].date + ' </span>' +
+//                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
+                                     // '<span class="event-age">' + ageArray[i].age + ' </span>' +
+                                    // '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
+                                    // '<span class="event-price">' + ageArray[i].price + ' </span>' +
+//                                     '<span class="event-venue">' + ageArray[i].venue.name + ' </span>' +
                                   // '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
                                 '</div>' +
                                 '<div class="modal fade ' + ageArrayBandCamel[i] + '">' +
@@ -250,6 +258,24 @@ $(document).ready(function(){
                                       '</div>' +
                                     '</div>' +
                                   '</div>' +
+
+//       $("#concert-list").append('<div class="card" id="resultCard" style="width: 18rem;">' +
+                                  // '<div class="picDiv">' +
+                                    // '<span class="event-image">'
+//                                     '<img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band">' +
+                                    // </span>' +
+                                  // '</div>' +
+//                                   '<div class="card-body" id="resultText">' +
+//                                     '<h3><span class="event-band-name">' + ageArray[i].bands + ' </span></h3><br>' +
+//                                     '<span class="event-venue lead">' + ageArray[i].venue.name + ' </span><br>' +
+//                                     '<span class="event-date">' + ageArray[i].date[1] + '-' + ageArray[i].date[2] + '-' + ageArray[i].date[0] + ' </span><br>' +
+//                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
+                                  //   '<span class="event-age">' + ageArray[i].age + ' </span>' +
+                                  //   '<span class="event-genre">' + ageArray[i].genre + ' </span>' +
+                                  //   '<span class="event-price">' + ageArray[i].price + ' </span>' +
+                                  //   '<span class="event-location">' + ageArray[i].venue.location + ' </span>' +
+                                  // '</div>' +
+
                                 '</div>');
     }
     $("#concert-list").show();
