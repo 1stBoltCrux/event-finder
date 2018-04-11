@@ -168,6 +168,14 @@ function ageMatchLoop(string) {
   }
 }
 
+//AGEARRAY ORDERED CHRONOLOGICALLY
+function ageArrayOrder() {
+  ageArray.sort(function(a,b) {
+    return a.date[2] - b.date[2];
+  });
+}
+
+
 //AGEARRAY TO CAMEL CASE
 function ageArrayBandToCamel() {
   for (var i = 0; i < ageArray.length; i++) {
@@ -200,6 +208,7 @@ $(document).ready(function(){
     areaMatchLoop(inputArea);
     genreMatchLoop(inputGenre);
     ageMatchLoop(inputAge);
+    ageArrayOrder();
     ageArrayBandToCamel();
     console.log(dateArray);
     console.log(areaArray);
