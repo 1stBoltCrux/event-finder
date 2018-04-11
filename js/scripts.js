@@ -233,21 +233,23 @@ $(document).ready(function(){
                                       '<div class="modal-content">' +
                                         // <!-- Modal Header -->
                                         '<div class="modal-header">' +
-                                          '<h4 class="modal-title">' + ageArray[i].bands + '</h4>' +
+                                          '<h4 class="modal-title">' + ageArray[i].bands + '<span class="title-venue"> @ ' + ageArray[i].venue.name +  '</span></h4>' +
                                           '<button type="button" class="close" data-dismiss="modal">&times;</button>' +
                                         '</div>' +
                                         // <!-- Modal body -->
                                         '<div class="modal-body">' +
                                           '<img class="modalImage" src="' + ageArray[i].image + '" alt="">' +
-                                          '<div>' +
-                                            '<span class="event-date">' + ageArray[i].date + '</span>' +
-                                            '<span class="event-time">' +ageArray[i].time + '</span>' +
-                                            '<span class="event-age">' + ageArray[i].age + '</span>' +
-                                            '<span class="event-genre">' + ageArray[i].genre + '</span>' +
-                                            '<span class="event-price">' + ageArray[i].price + '</span>' +
-                                            '<span class="event-venue">' + ageArray[i].venue.name + '</span>' +
-                                            '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
-                                            // '<span class="event-image"><img src="' + ageArray[i].image + '" alt="a band"></span>' +
+                                          '<div class="row">' +
+                                            '<div class="col">' +
+                                              '<span class="event-genre">' + ageArray[i].genre + '</span>' +
+                                              '<span class="event-price">' + ageArray[i].price + '</span>' +
+                                              '<span class="event-location">' + ageArray[i].venue.location + '</span>' +
+                                            '</div>' +
+                                            '<div class="col">' +
+                                              '<span class="event-date">' + ageArray[i].date + '</span>' +
+                                              '<span class="event-time">' +ageArray[i].time + '</span>' +
+                                              '<span class="event-age">' + ageArray[i].age + '</span>' +
+                                            '</div>' +
                                           '</div>' +
                                         '</div>' +
                                       // <!-- Modal footer -->
