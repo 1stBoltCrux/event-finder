@@ -284,8 +284,8 @@ $(document).ready(function(){
                                             '</div>' +
                                           '</div>' +
                                           '<div class="row show-info">' +
+                                            '<a target="_blank" href="http://www.ticketmaster.com"><span class="ticket-button btn btn-secondary">Buy Tickets</span></a>' +
                                             '<h5 class="bold"> Show Info:</h5><br>' +
-                                            '<a target="_blank" href="http://www.ticketmaster.com"><span class="ticket-button btn btn-info">Buy Tickets</span></a>' +
                                             '<span>' + ageArray[i].showInfo + '</span>' +
                                           '</div>' +
                                         '</div>' +
