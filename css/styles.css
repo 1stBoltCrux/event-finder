@@ -233,11 +233,17 @@ label {
 .footsie {
   margin-left: 100px;
   margin-top: 80px;
-
 }
 
 li {
   list-style: none;
+}
+.footlist{
+  color: white;
+}
+
+.footlist:hover {
+  color: #cc3c21;
 }
 
 .footer-title {
