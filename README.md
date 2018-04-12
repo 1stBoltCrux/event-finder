@@ -16,7 +16,7 @@ This webpage allows users to search a local concert calendar sorted by date, gen
 | Program will return all concerts scheduled within given dates | Input: 4/18/18, 4/20/18 | Output: Brad Paisley @ Crystal Ballroom on 4/18/18, Keith Urban @ Wonder Ballroom 4/19/18, Thee Oh Sees @ Bunk Bar on 4/20/28 |
 | Program will return a concert in a given area | Input: 4/18/18, 4/19/18, Northeast | Output: Skrillex @ The Know on 4/18/18, Violent Femmes @ Wonder Ballroom on 4/18/18 |
 | Program will return a concert of a given genre | Input: 4/18/18, 4/20/18, Northeast, Rock | Output: Violent Femmes @ Wonder Ballroom on 4/18/18, Built To Spill @ Mississippi Studios on 4/20/18|
-| Program will filter results by Age  | Input: 4/18/18, 4/20/18, Northeast, Rock, All Ages |Output: Violent Femmes @ Wonder Ballroom on 4/18/18| 
+| Program will filter results by Age  | Input: 4/18/18, 4/20/18, Northeast, Rock, All Ages | Output: Violent Femmes @ Wonder Ballroom on 4/18/18|
 
 
 ## Setup/Installation Requirements
@@ -34,9 +34,9 @@ N/A
 
 For Support, contact:
 Matt Miller: matt.f.miller@live.com
-Matt Dowdney:
-Ted :
-Aaron :
+Matt Dowdney: theofficialmatt@gmail.com
+Ted Leary: markeleary@gmail.com
+Aaron Akbari-Mort: aaronakbarimort@gmail.com
 
 ## Technologies Used
 

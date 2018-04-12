@@ -1,4 +1,11 @@
 /*Navbar*/
+a {
+  color: #346397;
+}
+
+a:hover {
+  color: #304978;
+}
 .navbar {
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: -56px;
@@ -212,6 +219,7 @@ label {
   color: white;
 }
 
+
 .featureImage{
   margin-bottom: 35px;
 }
@@ -239,4 +247,36 @@ li {
   margin-bottom: 15px;
   color: white;
   text-shadow: 1px 1px 10px black;
+
+.ticket-button {
+  width: 400px;
+  background-color: #346397;
+  border: #346397;
+  margin-top: 10px;
+}
+
+.ticket-button:hover {
+  background-color: #304978;
+}
+
+.btn-primary {
+  background-color: #346397;
+  border: #346397;
+}
+
+.btn-primary:hover {
+  background-color: #304978;
+}
+
+.btn-danger {
+    background-color: #cc3c21;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #a8321c;
+}
+
+.modal-title {
+  color: white;
 }
