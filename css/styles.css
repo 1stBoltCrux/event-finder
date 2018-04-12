@@ -217,6 +217,7 @@ label {
   width: 400px;
   background-color: #346397;
   border: #346397;
+  margin-top: 10px;
 }
 
 .ticket-button:hover {

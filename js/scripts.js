@@ -246,6 +246,8 @@ $(document).ready(function(){
     console.log(ageArrayBandCamel);
     if (ageArray.length === 0){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
+    } else {
+      $("#concert-list").text("");
     }
     for (var i = 0; i < ageArray.length; i++) {
 
