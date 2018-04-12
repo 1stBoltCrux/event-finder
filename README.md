@@ -6,7 +6,7 @@
 
 ## Description
 
-This <a href="1stBoltCrux.github.io/event-finder/">webpage</a> allows users to search a local concert calendar sorted by date, genre, area, and age.
+This <a href="https://mattfmiller.github.io/event-finder/">webpage</a> allows users to search a local concert calendar sorted by date, genre, area, and age.
 
 #### Specifications
 
