@@ -19,9 +19,7 @@ function Venue(name, location, address1, address2, website) {
   this.website = website;
 }
 
-
 var concertArray = [];
-
 
 // VENUES //
 var wonderBallroom = new Venue("Wonder Ballroom", "Northeast", "128 NE Russell St.", "Portland, OR 97212", "https://www.wonderballroom.com/");
@@ -182,7 +180,6 @@ function ageArrayOrder(array) {
   });
 }
 
-
 //AGEARRAY TO CAMEL CASE
 function ageArrayBandToCamel(array) {
   ageArrayBandCamel = [];
@@ -239,18 +236,12 @@ $(document).ready(function(){
     ageArrayOrder(ageArray);
     var ageArrayBandCamel = ageArrayBandToCamel(ageArray);
     monthNumberToString(ageArray);
-    console.log(dateArray);
-    console.log(areaArray);
-    console.log(genreArray);
-    console.log(ageArray);
-    console.log(ageArrayBandCamel);
     if (ageArray.length === 0){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
     } else {
       $("#concert-list").text("");
     }
     for (var i = 0; i < ageArray.length; i++) {
-
       $("#concert-list").append('<div class="card list-div" id="resultCard" style="width: 18rem;">' +
                                   '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<div class="card-body" id="resultText">' +
