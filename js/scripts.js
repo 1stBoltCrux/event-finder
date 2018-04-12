@@ -246,6 +246,8 @@ $(document).ready(function(){
     console.log(ageArrayBandCamel);
     if (ageArray.length === 0){
       $("#concert-list").text('No shows currently match your search criteria.  ¯|_(ツ)_/¯');
+    } else {
+      $("#concert-list").text("");
     }
     for (var i = 0; i < ageArray.length; i++) {
 
@@ -253,7 +255,7 @@ $(document).ready(function(){
                                   '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><span class="event-image' + ageArray[i].bands +'"><img class="card-img-top" id="resultImg" src="' + ageArray[i].image + '" alt="a band"></span></a>' +
                                   '<div class="card-body" id="resultText">' +
                                     '<a href="#" data-toggle="modal" data-target=".' + ageArrayBandCamel[i] + '"><h3><span class="event-band-name' + ageArray[i].bands + '">' + ageArray[i].bands + '</span></h3></a><br>' +
-                                    '<span class="event-venue lead"><a href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
+                                    '<span class="event-venue lead"><a target="_blank" href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
                                     '<span class="event-date">' + ageArray[i].date[1] + ' ' + ageArray[i].date[2] + ', ' + ageArray[i].date[0] + ' </span><br>' +
                                     '<span class="event-time">' + ageArray[i].time + ' </span>' +
                                   '</div>' +
@@ -278,12 +280,13 @@ $(document).ready(function(){
                                               '<span class="event-age float-right">' + ageArray[i].age + '</span><br>' +
                                             '</div>' +
                                             '<div class="col right">' +
-                                              '<span class="event-venue"><a href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
+                                              '<span class="event-venue"><a target="_blank" href="' + ageArray[i].venue.website + '">' + ageArray[i].venue.name + '</a></span><br>' +
                                               '<span class="event-venue-address1">' + ageArray[i].venue.address1 + ' </span><br>' +
                                               '<span class="event-venue-address2">' + ageArray[i].venue.address2 + ' </span><br>' +
                                             '</div>' +
                                           '</div>' +
                                           '<div class="row show-info">' +
+                                            '<a target="_blank" href="http://www.ticketmaster.com"><span class="ticket-button btn btn-secondary">Buy Tickets</span></a>' +
                                             '<h5 class="bold"> Show Info:</h5><br>' +
                                             '<span>' + ageArray[i].showInfo + '</span>' +
                                           '</div>' +
