@@ -1,4 +1,4 @@
-# Concert Dog
+# Show Dog
 
 #### A Searchable Local Concert Calendar
 
@@ -28,7 +28,7 @@ This <a href="https://mattfmiller.github.io/event-finder/">webpage</a> allows us
 
 ## Known Bugs
 
-N/A
+Site has been designed to not accept an inputted date outside of the month of April.
 
 ## Support and contact details
 
