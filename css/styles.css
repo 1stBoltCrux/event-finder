@@ -44,7 +44,7 @@
 
 /*Footer*/
 .container-fluid.footer {
-  background-color: #1C3763;
+  background-color: #304a79;
   color: white;
   height: 350px;
   margin: 50px, 0, 50px, 0;
@@ -57,6 +57,12 @@
 .centered {
   margin: auto;
   color: #fff;
+}
+
+#showDogLogo {
+  margin-left: -20px;
+  height: 200px;
+  width:  200px;
 }
 
 /*Fonts*/
@@ -208,4 +214,29 @@ label {
 
 .featureImage{
   margin-bottom: 35px;
+}
+
+.logo {
+  max-height: 50px;
+  filter: invert(100%);
+  display: inline-block;
+}
+
+.footsie {
+  margin-left: 100px;
+  margin-top: 80px;
+
+}
+
+li {
+  list-style: none;
+}
+
+.footer-title {
+  font-family: 'Fjalla One', serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 1px 1px 10px black;
 }
