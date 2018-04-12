@@ -2,11 +2,11 @@
 
 #### A Searchable Local Concert Calendar
 
-#### By _**Matt Miller, Matt Dowdney Ted, and Aaron**_
+#### By _**Matt Miller, Matt Dowdney Ted Leary, and Aaron Akbari-Mort**_
 
 ## Description
 
-This webpage allows users to search a local concert calendar sorted by date, genre, area, and age.
+This <a href="1stBoltCrux.github.io/event-finder/">webpage</a> allows users to search a local concert calendar sorted by date, genre, area, and age.
 
 #### Specifications
 
