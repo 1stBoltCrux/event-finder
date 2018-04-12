@@ -32,7 +32,10 @@ a:hover {
 }
 
 #featShows {
-  padding-bottom: 35px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid black;
+  margin-bottom: 25px;
+
 }
 
 .featuredCard {
